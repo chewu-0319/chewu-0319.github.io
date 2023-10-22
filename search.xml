@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>成績計算</title>
+      <link href="/2023/01/31/%E6%88%90%E7%B8%BE%E8%A8%88%E7%AE%97/"/>
+      <url>/2023/01/31/%E6%88%90%E7%B8%BE%E8%A8%88%E7%AE%97/</url>
+      
+        <content type="html"><![CDATA[<html>    <!DOCTYPE html>    <html>      <head>        <title>Score Calculator</title>      </head>      <body>        <h1>Score Calculator</h1>                <form>                    <label for="score1">第一次段考:</label>          <input type="text" id="score1" name="score1"><br><br>          <label for="score2">第二次段考:</label>          <input type="text" id="score2" name="score2"><br><br>          <label for="regularScore">平時成績:</label>          <input type="text" id="regularScore" name="regularScore"><br><br>        </form>        <button onclick="calculate()">送出</button>        <p id="result"></p>        <script>          function calculate() {            var regularScore = parseInt(document.querySelector("#regularScore").value);            var score1 = parseInt(document.querySelector("#score1").value);            var score2 = parseInt(document.querySelector("#score2").value);            var score3 = (60 - (regularScore * 0.4) - (score1 + score2) * 0.2) / 0.2;            if (score3 >= 60) {              document.querySelector("#result").innerHTML = "You passed with a score of " + score3 + ".";            } else if (score3 >= 40) {              document.querySelector("#result").innerHTML = "You need " + (60 - (regularScore * 0.4) - (score1 + score2 + score3) * 0.2) / 0.2 + " points to reach 60 and " + (40 - (regularScore * 0.4) - (score1 + score2 + score3) * 0.2) / 0.2 + " points to reach 40.";            } else {              document.querySelector("#result").innerHTML = "You failed with a score of " + score3 + ".";            }          }        </script>      </body>          </html>    ]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++課程</title>
       <link href="/2022/07/26/1-test/"/>
       <url>/2022/07/26/1-test/</url>
